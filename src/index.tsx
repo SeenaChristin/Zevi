@@ -8,11 +8,12 @@ import Header from './components/Header';
 import Products from './components/Products';
 
 
-
 const AppLayout = () =>{
 
   const[searchClick, setSearchClick] = useState<Boolean>(false);
+
     return(
+        
         <div style={{ backgroundImage: `url(${homeBg})` }} className='main'>  
          <Header setSearchClick={setSearchClick}/>
         {searchClick && <Suggestions/>}
