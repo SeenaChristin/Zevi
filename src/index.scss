@@ -1,0 +1,48 @@
+body{
+    margin:0px;
+    padding: 0px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo-cont{
+   width:100%;
+   display: flex;
+   justify-content: flex-end;
+   margin-top: 1.5%;
+   margin-right: 5%;
+}
+.input-box{
+   
+    border-color: aliceblue;
+    border-radius: 0.7em;
+    width:40vw;
+    background: white;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+
+    .home-input{
+        font-size: 1.2rem;
+        font-family: sans-serif;
+        font-weight: 200;
+        border:none;
+        appearance: none;
+        flex:1;
+        outline: none;
+    }
+
+    img{
+        width: 1.4em;
+    }
+}
+
