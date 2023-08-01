@@ -1,0 +1,31 @@
+.products-wrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.products{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .input-box{
+        margin-top: -2rem;
+    }
+}
+.search-heading{
+    padding: 0 1.5rem;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+.search-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+
+    .product-items{
+        flex-basis: 70%;
+        border: 1px solid black;
+    }
+}

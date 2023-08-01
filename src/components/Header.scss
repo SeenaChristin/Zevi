@@ -1,0 +1,32 @@
+.logo-cont{
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5%;
+    margin-right: 5%;
+ }
+ .input-box{
+     border: 0.5px solid rgb(179, 146, 146);
+     border-radius: 0.7em;
+     width:40vw;
+     background: white;
+     padding: 0.5em;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-top: 3rem;
+ 
+     .home-input{
+         font-size: 1.2rem;
+         font-family: sans-serif;
+         font-weight: 200;
+         border:none;
+         appearance: none;
+         flex:1;
+         outline: none;
+     }
+ 
+     img{
+         width: 1.4em;
+     }
+ }

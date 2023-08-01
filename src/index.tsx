@@ -1,35 +1,35 @@
 import * as React from 'react'; 
 import * as ReactDOM from 'react-dom';
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import { useState } from 'react';
 import homeBg from './img/home_bg.png';
-import searchIcon from './img/search.svg'
-import logo from './img/logo.png'
 import Suggestions from './components/Suggestions';
+import Header from './components/Header';
+import Products from './components/Products';
 
 
 
 const AppLayout = () =>{
-    const[searchClick, setSearchClick] = useState(false);
+
+  const[searchClick, setSearchClick] = useState<Boolean>(false);
     return(
         <div style={{ backgroundImage: `url(${homeBg})` }} className='main'>  
-         <div className='logo-cont'>
-        <img src={logo}></img>
-        </div>  
-        <form className="input-box">
-          <input
-            type="text"
-            className="home-input"
-            placeholder="Search"
-            onClick ={()=>{
-                setSearchClick((value)=>!value);
-            }}
-          />
-          <img src={searchIcon}></img>
-        </form>
+         <Header setSearchClick={setSearchClick}/>
         {searchClick && <Suggestions/>}
         </div>
     )
 };
 
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout/>
+  },
+  {
+    path: "/products",
+    element: <Products/>
+  }
+])
+
 const root = document.getElementById('container');
-ReactDOM.render(<AppLayout/>,root);
+ReactDOM.render(<RouterProvider router={appRouter}/>,root);
